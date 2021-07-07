@@ -1,0 +1,40 @@
+<! DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title> Aplicativos de página única para páginas GitHub </title>
+    <script type = "text / javascript">
+      // Aplicativos de página única para páginas GitHub
+      // Licença MIT
+      // https://github.com/rafgraph/spa-github-pages
+      // Este script pega o url atual e converte o caminho e a consulta
+      // string em apenas uma string de consulta e, em seguida, redireciona o navegador
+      // para o novo url com apenas uma string de consulta e um fragmento hash,
+      // por exemplo, https: //www.foo.tld/one/two? a = b & c = d # qwe, torna-se
+      // https: //www.foo.tld/? / um / dois & a = b ~ e ~ c = d # qwe
+      // Observação: este arquivo 404.html deve ter pelo menos 512 bytes para funcionar
+      // com Internet Explorer (atualmente é> 512 bytes)
+
+      // Se você estiver criando um site de páginas de projeto e NÃO usando um domínio personalizado,
+      // em seguida, defina pathSegmentsToKeep como 1 (os usuários corporativos podem precisar defini-lo como> 1).
+      // Desta forma, o código substituirá apenas a parte da rota do caminho, e não
+      // o diretório real no qual o aplicativo reside, por exemplo:
+      // https://username.github.io/repo-name/one/two?a=b&c=d#qwe torna-se
+      // https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
+      // Caso contrário, deixe pathSegmentsToKeep como 0.
+      var pathSegmentsToKeep = 0;
+
+      var l = window.location;
+      l.replace (
+        l.protocol + '//' + l.hostname + (l.port? ':' + l.port: '') +
+        l.pathname.split ('/'). slice (0, 1 + pathSegmentsToKeep) .join ('/') + '/? /' +
+        l.pathname.slice (1) .split ('/'). slice (pathSegmentsToKeep) .join ('/'). replace (/ & / g, '~ and ~') +
+        (l.search? '&' + l.search.slice (1) .replace (/ & / g, '~ e ~'): '') +
+        l.hash
+      );
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
