@@ -7,3 +7,4 @@ Segue o link da página: https://josanjohnata.github.io/project-netflix-final/
 ![alt text width="25%"](https://github.com/josanjohnata/project-netflix-final/blob/gh-pages/Screenshot%20from%202021-07-28%2012-30-44.png?raw=true)
 ![alt text width="25%"](https://github.com/josanjohnata/project-netflix-final/blob/gh-pages/Screenshot%20from%202021-07-28%2012-29-40.png?raw=true)
 ![alt text width="25%"](https://github.com/josanjohnata/project-netflix-final/blob/gh-pages/Screenshot%20from%202021-07-28%2012-29-31.png?raw=true)
+
